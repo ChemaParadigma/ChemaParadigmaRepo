@@ -50,8 +50,8 @@ public class BuilderUser {
 
         String[] roles = {"INVITED","USER","ADMIN"};
 
-        return IntStream.range(0, roles.length)
-                .filter(i -> roleResult <= i)
+       return IntStream.range(0, roles.length)
+                .filter(i -> roleResult >= i)
                 .mapToObj(i -> new SimpleGrantedAuthority(roles[i]))
                 .collect(Collectors.toList());
     }
