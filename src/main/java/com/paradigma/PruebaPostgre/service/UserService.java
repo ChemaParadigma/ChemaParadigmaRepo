@@ -1,7 +1,7 @@
 package com.paradigma.PruebaPostgre.service;
 
 
-import com.paradigma.PruebaPostgre.entity.UserLogin;
+import com.paradigma.PruebaPostgre.entity.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,10 +10,10 @@ import java.util.concurrent.CompletionStage;
 @Service
 public interface UserService {
 
-  CompletionStage<String> addUser(UserLogin user);
+  CompletionStage<String> addUser(User user);
 
-  CompletionStage<List<UserLogin>> getUsers();
+  CompletionStage<List<User>> getUsers();
 
-  CompletionStage<List<UserLogin>> getUsersByName(String name);
+  CompletionStage<User> getUserByUserName(String userName);
 
 }

@@ -1,15 +1,15 @@
 package com.paradigma.PruebaPostgre.repository;
 
-import com.paradigma.PruebaPostgre.entity.UserLogin;
+import com.paradigma.PruebaPostgre.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import java.io.Serializable;
 
 
 @Repository
-public interface UserRepository extends JpaRepository<UserLogin, Integer>{
+public interface UserRepository extends JpaRepository<User, Serializable>{
 
-    List<UserLogin> findByName(String name);
+    User findByUserName(String userName);
 
 }
